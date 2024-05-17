@@ -5,11 +5,11 @@ import com.sparta.schedulefirst.dto.ScheduleResponseDto;
 import com.sparta.schedulefirst.entity.Schedule;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.*;
 
 // URI를 반환하지 않고 Postman으로 테스트하므로 RestController 사용
 @RestController
+@RequestMapping("/schedule")
 public class ScheduleController {
 
     // Schedule 객체 저장소

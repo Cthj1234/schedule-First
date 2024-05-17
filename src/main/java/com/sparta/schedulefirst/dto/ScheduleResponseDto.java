@@ -8,11 +8,11 @@ import java.time.ZonedDateTime;
 @Getter
 public class ScheduleResponseDto implements Comparable<ScheduleResponseDto>{
 
-    private int id;
-    private String title;
-    private String contents;
-    private String manager;
-    private ZonedDateTime created_Time;
+    private final int id;
+    private final String title;
+    private final String contents;
+    private final String manager;
+    private final ZonedDateTime created_Time;
 
     // (공통 조건) 비밀번호 반환 X
     public ScheduleResponseDto(Schedule schedule) {

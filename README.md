@@ -1,11 +1,11 @@
 # API 명세서
-|기능&nbsp;&nbsp;&nbsp;|Method|URL|request|response|
+|기능&nbsp;&nbsp;&nbsp;&nbsp;|Method|URL|request|response|
 |---|---|---|---|---|
-|일정등록&nbsp;&nbsp;&nbsp;&nbsp;|Post|/create|{ "title":"제목", "contents":"내용", "manager":"담당자 이름", "password":"암호" }|{ "id":id, "title":"제목", "contents":"내용", "manager" : "담당자 이름", "created_Time":"작성일" }|
-|일정조회&nbsp;&nbsp;&nbsp;&nbsp;|Get|/find/{id}|id = {id}|{ "id":"id", "title":"제목", "contents":"내용", "manager" : "담당자 이름", "created_Time":"작성일" }|
-|전체조회&nbsp;&nbsp;&nbsp;&nbsp;|Get|/findAll|X|{"responseList" : { "id":id, "title":"제목", "contents":"내용", "manager" : "담당자 이름", "created_Time":"작성일" }, ....}|
-|일정수정&nbsp;&nbsp;&nbsp;&nbsp;|Post|/update/{id}|?id = {id}, { "title":"제목", "contents":"내용", "manager":"담당자 이름", "password":"암호"}|{id}|
-|일정삭제&nbsp;&nbsp;&nbsp;&nbsp;|Delete|/delete/{id}|?id = {id} , String password|{id}|
+|일정등록|Post|/create|{ "title":"제목", "contents":"내용", "manager":"담당자 이름", "password":"암호" }|{ "id":id, "title":"제목", "contents":"내용", "manager" : "담당자 이름", "created_Time":"작성일" }|
+|일정조회|Get|/find/{id}|id = {id}|{ "id":"id", "title":"제목", "contents":"내용", "manager" : "담당자 이름", "created_Time":"작성일" }|
+|전체조회|Get|/findAll|X|{"responseList" : { "id":id, "title":"제목", "contents":"내용", "manager" : "담당자 이름", "created_Time":"작성일" }, ....}|
+|일정수정|Post|/update/{id}|?id = {id}, { "title":"제목", "contents":"내용", "manager":"담당자 이름", "password":"암호"}|{id}|
+|일정삭제&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Delete|/delete/{id}|?id = {id} , String password|{id}|
 </br>
 
 ---

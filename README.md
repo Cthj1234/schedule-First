@@ -10,5 +10,4 @@
 
 ---
 # UseCase Diagram
-![image](https://github.com/Cthj1234/schedule-First/assets/114575847/7013cef2-2971-4561-a2a6-1aabb8442731)
-<img src="(https://github.com/Cthj1234/schedule-First/assets/114575847/7013cef2-2971-4561-a2a6-1aabb8442731)." width="200" height="400"/>
+<img src= "https://github.com/Cthj1234/schedule-First/assets/114575847/bc233c63-a83a-48af-b89c-4e925f0f2cff.jpg" width="500" height="500"/>

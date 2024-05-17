@@ -16,3 +16,4 @@
 ---
 # Schedule - ERD
 
+<img src= "https://github.com/Cthj1234/schedule-First/assets/114575847/51a92582-18bc-434d-9357-f077d51e5f4c.jpg" width="200" height="100"/>

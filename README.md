@@ -11,3 +11,8 @@
 ---
 # UseCase Diagram
 <img src= "https://github.com/Cthj1234/schedule-First/assets/114575847/bc233c63-a83a-48af-b89c-4e925f0f2cff.jpg" width="500" height="500"/>
+
+
+---
+# Schedule - ERD
+

@@ -7,16 +7,12 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CommentUpdateRequestDto {
+public class CommentDeleteRequestDto {
 
-    // ID (중복 방지, 고유값)
+    // 댓글의 고유 ID (중복 방지)
     private Long id;
-
-    // 댓글 내용
-    private String contents = "";
 
     // 사용자 ID
     private String userId = "";
-
 
 }

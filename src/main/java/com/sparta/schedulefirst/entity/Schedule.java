@@ -37,7 +37,8 @@ public class Schedule {
     @Column(nullable = false)
     private ZonedDateTime created_Time;
 
-    @OneToMany(mappedBy = "schedule")
+    // 게시글 지워지면 댓글들 모두 삭제(cascade)
+    @OneToMany(mappedBy = "schedule", cascade = CascadeType.ALL)
     private List<Comment> commentList = new ArrayList<>();
 
     // new Constructor 생성

@@ -1,6 +1,7 @@
 package com.sparta.schedulefirst.entity;
 
 import com.sparta.schedulefirst.dto.ScheduleRequestDto;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,16 +9,30 @@ import lombok.Setter;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
+@Table(name = "schedule")
 public class Schedule {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(nullable = false)
     private String title;
+
+    @Column(nullable = false)
     private String contents;
+
+    @Column(nullable = false)
     private String manager;
+
+    @Column(nullable = false)
     private String password;
+
+    @Column(nullable = false)
     private ZonedDateTime created_Time;
 
 

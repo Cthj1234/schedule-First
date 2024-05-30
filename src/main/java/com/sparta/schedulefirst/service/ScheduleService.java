@@ -5,11 +5,9 @@ import com.sparta.schedulefirst.dto.ScheduleResponseDto;
 import com.sparta.schedulefirst.entity.Schedule;
 import com.sparta.schedulefirst.repository.ScheduleRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +35,7 @@ public class ScheduleService {
     public List<ScheduleResponseDto> findAll() {
         List<Schedule> list = scheduleRepository.findAll();
 
-        if(list.isEmpty()){
+        if (list.isEmpty()) {
             throw new IllegalArgumentException("아무 일정도 등록되지 않았습니다.");
         }
         List<ScheduleResponseDto> responseDtoList = new ArrayList<>();

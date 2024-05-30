@@ -1,6 +1,7 @@
 package com.sparta.schedulefirst.entity;
 
 import com.sparta.schedulefirst.dto.CommentRequestDto;
+import com.sparta.schedulefirst.dto.CommentUpdateRequestDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,5 +32,9 @@ public class Comment extends Timestamped {
         this.commentContents = requestDto.getContents();
         this.userId = requestDto.getUserId();
         this.schedule = schedule;
+    }
+
+    public void update(CommentUpdateRequestDto requestDto) {
+        this.commentContents = requestDto.getContents();
     }
 }

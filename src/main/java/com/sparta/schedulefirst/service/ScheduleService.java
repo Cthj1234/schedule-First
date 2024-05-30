@@ -48,7 +48,6 @@ public class ScheduleService {
     }
 
     @Transactional
-    @ResponseStatus(HttpStatus.CREATED)
     public void update(Long id, ScheduleRequestDto requestDto) {
         Schedule schedule = scheduleRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("해당 id는 존재하지 않습니다.")
@@ -63,7 +62,6 @@ public class ScheduleService {
     }
 
     @Transactional
-    @ResponseStatus(HttpStatus.CREATED)
     public void delete(Long id, @RequestBody String password) {
         Schedule schedule = scheduleRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("해당되는 일정은 없습니다.")

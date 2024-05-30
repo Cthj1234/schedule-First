@@ -4,6 +4,7 @@ import com.sparta.schedulefirst.dto.ScheduleRequestDto;
 import com.sparta.schedulefirst.dto.ScheduleResponseDto;
 import com.sparta.schedulefirst.service.ScheduleService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class ScheduleController {
 
     // 요구사항1 일정 등록 메소드
     @PostMapping("/schedule/create")
+    @Transactional
     public ScheduleResponseDto createSchedule(@RequestBody ScheduleRequestDto requestDto) {
         return scheduleService.createSchedule(requestDto);
     }
@@ -39,12 +41,14 @@ public class ScheduleController {
     //1. 서버에 일정 수정을 요청할 때 `비밀번호`를 함께 전달합니다.
     //2. 수정된 일정의 정보를 반환 받아 확인할 수 있습니다.
     @PutMapping("/schedule/update/{id}")
+    @Transactional
     public void update(@PathVariable Long id, @RequestBody ScheduleRequestDto requestDto) {
         scheduleService.update(id, requestDto);
     }
 
     //요구사항5 password를 전달받아 삭제
     @DeleteMapping("/schedule/delete/{id}")
+    @Transactional
     public void delete(@PathVariable Long id, @RequestBody String password) {
         scheduleService.delete(id, password);
     }

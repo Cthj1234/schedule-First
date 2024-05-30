@@ -8,6 +8,8 @@ import lombok.Setter;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -18,7 +20,7 @@ public class Schedule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(nullable = false)
     private String title;
@@ -35,9 +37,12 @@ public class Schedule {
     @Column(nullable = false)
     private ZonedDateTime created_Time;
 
+    @OneToMany(mappedBy = "schedule")
+    private List<Comment> commentList = new ArrayList<>();
 
     // new Constructor 생성
     public Schedule(ScheduleRequestDto requestDto) {
+
         this.title = requestDto.getTitle();
         this.contents = requestDto.getContents();
         this.manager = requestDto.getManager();
